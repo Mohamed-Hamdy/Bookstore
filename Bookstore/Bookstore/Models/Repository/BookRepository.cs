@@ -17,6 +17,7 @@ namespace Bookstore.Models.Repository
                     Id = 1,
                     Description = "Description 1 ",
                     Title = "java Programming",
+                    ImagesUrl = "book1.jpg",
                     Author = new Author()
                 },
                 new Book
@@ -24,6 +25,7 @@ namespace Bookstore.Models.Repository
                     Id = 2,
                     Description = "Description 2 ",
                     Title = "Python Programming",
+                    ImagesUrl = "book2.jpg",
                     Author = new Author()
 
                 },new Book
@@ -31,12 +33,14 @@ namespace Bookstore.Models.Repository
                     Id = 3,
                     Description = "Description 3 ",
                     Title = "C# Programming",
+                    ImagesUrl = "book3.jpg",
                     Author = new Author()
                 },
             };
         }
         public void Add(Book entity)
         {
+            entity.Id = books.Max(b => b.Id) + 1;
             books.Add(entity);
         }
 
@@ -62,6 +66,7 @@ namespace Bookstore.Models.Repository
             book.Title = newBook.Title;
             book.Description = newBook.Description;
             book.Author = newBook.Author;
+            book.ImagesUrl = newBook.ImagesUrl;
 
         }
 

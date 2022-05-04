@@ -1,0 +1,32 @@
+coding style -> Code first then create DataBase 
+Projects steps :
+
+1- create .net core mvc project
+2- create models 
+3- create Book Repository 
+   3.1 IBookstoreRepository interface
+   3.2 BookRepository and AuthorRepository to implement interface Functions  
+
+5- Create Author Contoller (for all function in controller create view page)
+   5.1 Create Author index View
+   5.2 Create Details view 
+   5.3 Create Add Author View 
+   5.4 ------ Edit Author 
+   5.5 Delete Author
+
+6- for BookRepository 
+   6.1 Get All Books 
+   6.2 Edit Book using viewmodel(BookAuthorViewmodel) to create use Author object
+   6.3 error message when create book with empty inputs (Defense code)
+   6.4 Delete Id input filed from form and make his value auto increament	 
+   6.5 Create Model Validation
+   6.6 Make Client Side Validation by add client side libaraies (jquery - jquery-validation - jquery-validation-unobtrusive) 
+   6.7 Uploads book image  
+   6.8 Update Uploaded Image
+
+7- DbContext Entity 
+   7.1 Create Dbcontext class with his Dbsets
+   7.2 Make Connection and install labraries for Database
+   7.3 Add tables to Database using Add Migration and update Database
+   7.4 Make AuthorDbRepository and BookDbRepository classes    
+   7.5 Add Data in Db Tables   

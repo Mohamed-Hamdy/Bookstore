@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Bookstore
 {
@@ -27,8 +28,13 @@ namespace Bookstore
         {
             //services.AddControllersWithViews();
             services.AddMvc();
-            services.AddSingleton<IBookstoreRepository<Author>, AuthorRepository>();
-            services.AddSingleton<IBookstoreRepository<Book>, BookRepository>();
+            services.AddScoped<IBookstoreRepository<Author>, AuthorDbRepository>();
+            services.AddScoped<IBookstoreRepository<Book>, BookDbRepository>();
+            services.AddDbContext<BookStoreDbContext>(options =>
+            {
+
+                options.UseSqlServer(Configuration.GetConnectionString("SqlCon"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
