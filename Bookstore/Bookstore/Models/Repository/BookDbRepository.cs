@@ -42,6 +42,14 @@ namespace Bookstore.Models.Repository
             _Db.Update(newBook);
             _Db.SaveChanges();
         }
+        public List<Book> Search(string term)
+        {
+            var result = _Db.Books.Include(a => a.Author)
+                .Where(b => b.Title.Contains(term)
+                || b.Description.Contains(term)
+                || b.Author.FullName.Contains(term)).ToList();
 
+            return result;
+        }
     }
 }

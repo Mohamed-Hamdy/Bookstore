@@ -14,7 +14,7 @@ Projects steps :
    5.4 ------ Edit Author 
    5.5 Delete Author
 
-6- for BookRepository 
+6- for BookRepository create
    6.1 Get All Books 
    6.2 Edit Book using viewmodel(BookAuthorViewmodel) to create use Author object
    6.3 error message when create book with empty inputs (Defense code)
@@ -23,7 +23,6 @@ Projects steps :
    6.6 Make Client Side Validation by add client side libaraies (jquery - jquery-validation - jquery-validation-unobtrusive) 
    6.7 Uploads book image  
    6.8 Update Uploaded Image
-
 7- DbContext Entity 
    7.1 Create Dbcontext class with his Dbsets
    7.2 Make Connection and install labraries for Database

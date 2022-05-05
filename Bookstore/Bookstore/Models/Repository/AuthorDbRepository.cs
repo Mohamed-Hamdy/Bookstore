@@ -40,6 +40,11 @@ namespace Bookstore.Models.Repository
             return _Db.Authors.ToList();
         }
 
+        public List<Author> Search(string term)
+        {
+            return _Db.Authors.Where(a => a.FullName.Contains(term)).ToList();
+        }
+
         public void Update(int id, Author newAuthor)
         {
             _Db.Update(newAuthor);
