@@ -1,5 +1,5 @@
 # Bookstore 
-<h3>about project</h3>
+<h3>About project</h3>
 BookStore project is ASP.NET Core Web Application using MVC Design Pattern, it's sample project it contain Authors and Books Sectiions.
 
 <h3>Project Features</h3>
